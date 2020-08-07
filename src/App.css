@@ -1,23 +1,25 @@
 .App {
   text-align: center;
+  background-color: teal;
 }
 
 header {
-  min-height: 300px;
+  min-height: 150px;
   background-image: url(./compDelivery/images/deliveryImage.jpg);
   background-size: cover;
-  background-position: center -400px;
+
   text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
   color:white;;
 }
+ .tilt{width: 100% !important
+}
 .mainItem{
-
-  border:  solid 1px;
-  overflow: hidden;
+  /* overflow: hidden; */
+  min-height: 150px;
 }
 .mainItem .pic{
   float: left;
-   height: 200px;
+   height: 150px;
   width:150px ;
   border-radius: 12px;
 
@@ -28,5 +30,19 @@ header {
   float: left;
 }
 .searchItem{
-float: right !important;
+float: right;
+}
+
+@media screen and (max-width: 992px) { 
+  .btn-sm{
+    width: 100% !important;
+    margin-bottom: 5px;
+  }
+  .sortItem{
+   float: none;
+   width: 100%;
+  }
+  .searchItem{
+    float: none;
+  }
 }

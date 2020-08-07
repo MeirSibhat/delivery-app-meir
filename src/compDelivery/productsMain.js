@@ -2,14 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { doApiGet } from '../services/apiService'
 import ProductItem from './productItem'
 import Header from './header'
-import _ from 'underscore'
 import Nav from './nav'
 
 function MainProducts() {
     let [prods_ar, setProds] = useState([])
     let [tempArr, setTempArr] = useState([])
     useEffect(() => {
-        let url = 'https://api-delivery-meir.herokuapp.com/products'
+        let url = 'https://api-products-meir.herokuapp.com/products';
         doApiGet(url)
             .then(data => {
                 console.log(data);
@@ -31,8 +30,15 @@ function MainProducts() {
         setProds(searchItems)
     }
     const SortProds = (_val) => {
-        let sortItem = _.sortBy(tempArr, _val);
-        setProds(sortItem)
+        let url = 'https://api-products-meir.herokuapp.com/products/sort/'+_val;
+        doApiGet(url)
+            .then(data => {
+                console.log(data);
+                setProds(data)
+                setTempArr(data)
+
+            })
+
     }
 
     return (

@@ -9,7 +9,9 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "underscore": "^1.10.2"
+    "react-vanilla-tilt": "^1.0.0",
+    "underscore": "^1.10.2",
+    "vanilla-tilt": "^1.7.0"
   },
   "scripts": {
     "start": "react-scripts start",
